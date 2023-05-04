@@ -1,0 +1,32 @@
+
+.flip-container {
+    background-color:transparent;
+    perspective: 1000px;
+    height: 230px;
+}
+.inner-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+.flip-container:hover .inner-card {
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+}
+.flip-image-1, .flip-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-text {
+    transform: rotateY(180deg);
+}
+
+.flip-container img {
+    width: 150px;
+}
